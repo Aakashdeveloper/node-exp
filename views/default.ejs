@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><% include partials/page/head.ejs %></head>
+  <body class="<%= classname %>">
+    <div class="container">
+      <h1><%= classname %></h1>
+      <h1><%= pagetitle %></h1>
+      
+      <% if(typeof(users) !== 'undefined'){%>
+            <ul>
+              <% for(var i=0; i<users.length; i++){ %>
+                 <li><%= users[i] %></li>
+
+              <% } %>
+            </ul>  
+      <% } %>
+    </div>
+
+
+    <% include partials/page/scripts.ejs %>
+  </body>
+</html>
